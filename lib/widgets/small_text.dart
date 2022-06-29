@@ -9,8 +9,8 @@ class SmallText  extends StatelessWidget {
   //constructor
   SmallText ({Key? key, this.color = const Color(0xffccc7c5),
     required this.text,
-    this.size = 15,
-    this.height = 1.2,// space b/w lines in paragraphs
+    this.size = 12,
+    this.height = 1,// space b/w lines in paragraphs
   }) : super(key: key);
 
   @override
