@@ -29,6 +29,7 @@ static double height20 = screenHeight /40.1;
   static double width30 = screenHeight /26.76;
 
 
+  static double font16 = screenHeight/ 50.12;
   static double font20 = screenHeight/ 40.1;
   static double font26 = screenHeight/ 31.57  ;
 
