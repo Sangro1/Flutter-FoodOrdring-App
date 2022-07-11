@@ -5,28 +5,35 @@ import 'package:e_commerce_app/widgets/big_text.dart';
 import 'package:e_commerce_app/widgets/expendable_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class RecommendedFoodDetail extends StatelessWidget {
-  const RecommendedFoodDetail({Key? key}) : super(key: key);
+  const RecommendedFoodDetail({Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
       body: CustomScrollView(
         slivers: [
            SliverAppBar(
+             automaticallyImplyLeading: false,
              toolbarHeight: 70,
-
-             //icons
              title: Row(
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
-                 AppIcon(icon: Icons.clear),
+                 //page navigation
+                 GestureDetector(
+                 onTap: (){
+                   //Get.toNamed(RoutesHelper.getInitial());
+                 }, //icons
+                  child: AppIcon(icon: Icons.clear)
+               ),
                  AppIcon(icon: Icons.shopping_cart_outlined),
                ],
              ),
+
              bottom: PreferredSize(
                 preferredSize: Size.fromHeight(20),
                child: Container(
@@ -47,12 +54,9 @@ class RecommendedFoodDetail extends StatelessWidget {
              backgroundColor: AppColors.singleColor,
              expandedHeight: 300,
              flexibleSpace: FlexibleSpaceBar(
-                background: Image.asset("assets/image/Food01.png",
-                  width: double.maxFinite,
-                  fit: BoxFit.cover,
+                background: Image.asset("assets/image/Food01.png", fit: BoxFit.cover,),
                 ),
              ),
-           ),
           SliverToBoxAdapter(
             child: Column(
                children: [
@@ -63,7 +67,6 @@ class RecommendedFoodDetail extends StatelessWidget {
                  )
                ],
             ),
-
           ),
         ],
       ),
@@ -86,7 +89,7 @@ class RecommendedFoodDetail extends StatelessWidget {
                     backgroundColor: AppColors.mainColor,
                     icon: Icons.remove),
                 // middle bar
-                 BigText(text: "\$12.88 "+" X "+" 0 ",
+                 BigText(text: "\$10 X  ",
                  color: AppColors.mainColor, size: Dimensions.font26,
                  ),
                 AppIcon(iconSize: Dimensions.iconSize24,

@@ -24,14 +24,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
           //search bar upper layout activity (showing the header)
           Container(
             child: Container(
-              margin: EdgeInsets.only(top: Dimensions.height45, bottom:Dimensions.height15 ),
+              margin: EdgeInsets.only(top:Dimensions.height45, bottom: Dimensions.height15 ),
               padding: EdgeInsets.only(left: Dimensions.width20,right: Dimensions.width20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
-                      BigText(text:"Bangladesh",color: AppColors.mainColor,size: 20),
+                      BigText(text:"Bangladesh",color: AppColors.mainColor,size:20),
                      Row(
                        children: [
                          SmallText(text:"Narsingdi",color:Colors.black54),
@@ -43,10 +43,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   ),
                    Container(
                     width: Dimensions.height45,
-                    height: Dimensions.height45 ,
+                    height: Dimensions.height45,
                     child: Icon(Icons.search, color: Colors.white, size: Dimensions.iconSize24),
                     decoration:  BoxDecoration(
-                      borderRadius: BorderRadius.circular(Dimensions.radius15 ),
+                      borderRadius: BorderRadius.circular(Dimensions.radius15),
                       color: AppColors.mainColor,
                     ),
                   ),
@@ -56,10 +56,9 @@ class _MainFoodPageState extends State<MainFoodPage> {
 
           ),
           // call that food page (showing the body)
-          Expanded(child: SingleChildScrollView(
-            child: FoodPageBody(),
+          Expanded(child: SingleChildScrollView(child: FoodPageBody(),
+          )),
 
-          ) )
         ],
       )
     );
